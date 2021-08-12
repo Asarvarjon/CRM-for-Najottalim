@@ -36,5 +36,19 @@
             font-size: 15px;
             font-weight: 700;
         }
+    } 
+}
+
+.no-student {
+    display: none;
+    flex-direction: column; 
+    width: 100%; 
+    margin-top: 20px; 
+
+    .free_space {
+        color: #fff;
+        margin: auto 0 auto 0;
+        text-align: center;
+        margin-top: 40px;
     }
 }
