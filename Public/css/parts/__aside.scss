@@ -1,0 +1,59 @@
+.aside {
+    width: 20%;
+    display: flex;
+    height: 100vh;
+    flex-direction: column; 
+    border-right: 4px solid $secondaryColor;
+    padding: 20px 0px 0px 10px;
+
+    .aside_name {
+        color: #fff;
+        font-size: 26px;
+        text-align: center;
+    }
+}
+
+.activities {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .activity_item {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-top: 30px;
+
+        .activity-name {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 500; 
+            margin-bottom: 10px;
+        }
+
+        .students_button, .select {
+            display: block;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: $secondaryColor;
+            color: $mainColor;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        // .select {
+        //     padding: 10px;
+        //     font-size: 16px;
+        //     font-weight: 600;
+        //     background-color: $secondaryColor;
+        //     color: $mainColor;
+        //     outline: none;
+        //     border: none;
+        //     border-radius: 5px;
+        // }
+    }
+
+}

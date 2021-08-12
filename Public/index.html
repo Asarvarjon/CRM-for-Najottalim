@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="shortcut icon" href="./icons/logo.jpg"  >
+    <title>Najot ta'lim - CRM</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+   <div class="container-fluid">
+    <div class="aside"> 
+            <h3 class="aside_name">
+                Zamonaviy kasblar maktabi
+            </h3> 
+
+            <ul class="activities">
+                <li class="activity_item">
+                    <button class="students_button">
+                        O'quvchilar
+                    </button>
+                </li>
+
+                <li class="activity_item">
+                    <span class="activity-name">Kurslar</span>
+                    <select class="select" name="kurslar" id="course">
+                        <option value="Kursni tanlang">Kursni tanlang</option>
+                        <option value="SMM">SMM</option>
+                        <option value="FrontEnd">FrontEnd</option>
+                        <option value="Foundation">Foundation</option>
+                        <option value="BackEnd">BackEnd</option>
+                        <option value="Dizayn">Grafik Dizayn</option>
+                        <option value="English">English</option>
+                        <option value="Arabic">Arabic</option>
+                    </select>
+                </li>
+
+                <li class="activity_item">
+                    <span class="activity-name">Kelish manbasi</span>
+                    <select class="select" name="kurslar" id="source">
+                        <option value="Manbani tanlang">Manbani tanlang</option>
+                        <option value="YouTube">YouTube</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Banner">Banner</option>
+                        <option value="Telegram">Telegram</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Boshqa">Boshqa</option> 
+                    </select>
+                </li>
+            </ul>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-br">
+                <h1 class="visually-hidden">
+                    Najot Ta'lim
+                </h1>
+                <img src="./icons/najot.svg" alt="najot ta'lim logo" class="brand-logo">
+                <p class="page_name">
+                  Welcome to <span class="page_name_color">Najot Ta'lim</span> Administration
+                </p>
+            </div>
+
+           <div class="typewriting">
+            <p class="motto">Ilm va tajriba ulashamiz!</p>
+           </div>
+
+
+           <div class="form-section">
+            <form class="form" action="/users">
+                <input required class="name_input" placeholder="O'quvchining ismi" id="name"  type="text"> 
+                <input required class="number_input" type="number" placeholder="Telefon raqami" id="number">
+
+                <p class="course_value">Kurs tanlanmagan</p>
+                <p class="source_value">Source tanlanmagan</p>
+                <button type="submit" class="submit">Qo'shish</button>
+            </form>
+           </div>
+        </div>
+    </header>
+   </div>  
+   <script src="./main.js"></script>
+    
+</body>
+</html>
