@@ -22,10 +22,10 @@ server.get("/", (req, res) => {
 })
 
 server.get("/users", async (req, res) => { 
-    let users = await user.readFile()
+    let users = await user.readFile() 
     users  =  JSON.stringify({
         data: users,
-    })
+    }) 
     res.send(users)
 })
 
