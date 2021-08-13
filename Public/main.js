@@ -4,9 +4,15 @@ const courseSelect = document.querySelector("#course")
 const sourceSelect = document.querySelector("#source")
 const nameInput = document.querySelector(".name_input")
 const numberInput = document.querySelector(".number_input")
+const studentBox = document.querySelector(".no-student")
+const studentsButton =document.querySelector(".students_button")
+const formSection = document.querySelector(".form-section")
+const tableSection = document.querySelector(".table")
 
-window.addEventListener("DOMContentLoaded", event => {
+studentsButton.addEventListener("click", event => {
     studentBox.style.display = "none";
+    formSection.style.display = "flex"
+    tableSection.style.display = "flex"
     loadUsers()
 }) 
 
@@ -55,7 +61,7 @@ window.addEventListener("DOMContentLoaded", event => {
      });
  }
 
- const studentBox = document.querySelector(".no-student")
+
 
 const courseValue = document.querySelector(".course_value")
 const sourceValue = document.querySelector(".source_value")
@@ -88,6 +94,7 @@ formElement.addEventListener("submit", async event => {
 
     response = await response.json()
     loadUsers() 
-
     
+    nameInput.value = null;
+    numberInput.value = null
 })
