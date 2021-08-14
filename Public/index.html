@@ -18,38 +18,25 @@
             </h3>
 
             <ul class="activities">
-                <li class="activity_item">
-                    <button class="students_button">
+                <li  class="activity_item">
+                    <button id="students_button" class="students_button">
                         O'quvchilar
                     </button>
                 </li>
 
                 <li class="activity_item">
-                    <span class="activity-name">Kurslar</span>
-                    <select class="select" name="kurslar" id="course">
-                        <option value="Kursni tanlang">Kursni tanlang</option>
-                        <option value="SMM">SMM</option>
-                        <option value="FrontEnd">FrontEnd</option>
-                        <option value="Foundation">Foundation</option>
-                        <option value="BackEnd">BackEnd</option>
-                        <option value="Dizayn">Grafik Dizayn</option>
-                        <option value="English">English</option>
-                        <option value="Arabic">Arabic</option>
-                    </select>
+                    <button class="course_button students_button">
+                        Kurslar
+                    </button>
                 </li>
 
-                <li class="activity_item">
-                    <span class="activity-name">Kelish manbasi</span>
-                    <select class="select" name="kurslar" id="source">
-                        <option value="Manbani tanlang">Manbani tanlang</option>
-                        <option value="YouTube">YouTube</option>
-                        <option value="Instagram">Instagram</option>
-                        <option value="Banner">Banner</option>
-                        <option value="Telegram">Telegram</option>
-                        <option value="Facebook">Facebook</option>
-                        <option value="Boshqa">Boshqa</option>
-                    </select>
-                </li>
+                <!-- <li class="activity_item">
+                    <button class="source_button students_button">
+                        Manbalar
+                    </button>
+                </li> -->
+
+               
             </ul>
         </div>
 
@@ -63,23 +50,52 @@
                     <p class="page_name">
                         Welcome to <span class="page_name_color">Najot Ta'lim</span> Administration
                     </p>
-                </div>
-
-                <div class="typewriting">
-                    <p class="motto">Ilm va tajriba ulashamiz!</p>
-                </div>
-
+                </div> 
+                
+                    <div class="typewriting">
+                        <p class="motto">Ilm va tajriba ulashamiz!</p>
+                    </div> 
 
                 <div class="form-section">
                     <form class="form" action="/users" autocomplete="off">
                         <input required class="name_input" placeholder="O'quvchining ismi" id="name" type="text">
                         <input required class="number_input" type="number" placeholder="Telefon raqami" id="number">
+                        <ul class="cSource">
+                            <li class="activity_item"> 
+                                <select class="select" name="kurslar" id="course" required>
+                                    <option value="Kursni tanlang">Kursni tanlang</option>
+                                    <option value="SMM">SMM</option>
+                                    <option value="FrontEnd">FrontEnd</option>
+                                    <option value="Foundation">Foundation</option>
+                                    <option value="BackEnd">BackEnd</option>
+                                    <option value="Dizayn">Grafik Dizayn</option>
+                                    <option value="English">English</option>
+                                    <option value="Arabic">Arabic</option>
+                                </select>
+                            </li>
+            
+                            <li class="activity_item" style="margin-left: 20px;"> 
+                                <select class="select" name="kurslar" id="source" required>
+                                    <option value="Manbani tanlang">Manbani tanlang</option>
+                                    <option value="YouTube">YouTube</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="Banner">Banner</option>
+                                    <option value="Telegram">Telegram</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="Boshqa">Boshqa</option>
+                                </select>
+                            </li>
+                        </ul>
 
-                        <p class="course_value">Kurs tanlanmagan</p>
-                        <p class="source_value">Source tanlanmagan</p>
+                        <!-- <p class="course_value">Kurs tanlanmagan</p>
+                        <p class="source_value">Source tanlanmagan</p> -->
                         <button type="submit" class="submit">Qo'shish</button>
                     </form>
+
+                   
                 </div> 
+
+
                 
                 <div class="result">
                     <table class="table">
@@ -98,6 +114,31 @@
                         </tbody>
 
                     </table>
+                    <table id="courseTable">
+                        <thead>
+                            <tr id="row"> 
+                                <th class="Chead">Kurs nomi</th>
+                                <th class="Chead">O'quvchilar soni</th> 
+                            </tr> 
+                        </thead>
+
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+
+                    <!-- <table id="sourseTable">
+                        <thead>
+                            <tr id="row"> 
+                                <th class="shead">Manbalar</th>
+                                <th class="shead">O'quvchilar soni</th> 
+                            </tr> 
+                        </thead>
+
+                        <tbody id="Stbody">
+                            
+                        </tbody>
+                    </table> -->
                 </div>
 
                 <div class="no-student">

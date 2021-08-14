@@ -33,5 +33,17 @@ module.exports = class Database {
 
         return newData 
 
-    }
+    } 
+
+    // async find(name) {
+    //     const newArray = []
+    //     let names = await this.readFile()
+    //     names.filter(element => {
+    //         if(element["name"].includes(name)){
+    //             // console.log(element);
+    //             newArray.push(element)
+    //             return newArray
+    //         }
+    //     })
+    // }
 }

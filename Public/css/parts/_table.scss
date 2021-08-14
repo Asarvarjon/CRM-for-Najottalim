@@ -3,13 +3,13 @@
     margin-top: 20px;
 }
 
-.table {
+.table, #courseTable , #sourseTable {
     display: none;
     width: 100%;
     flex-direction: column;
     margin: 0 auto; 
     border-collapse: collapse;
-}
+} 
 
 thead {
     border: 1px solid $secondaryColor; 
@@ -32,6 +32,30 @@ thead {
 
 .info {
     width: 16%;
+    color: #aaa;
+    padding: 10px;
+    text-align: left;
+}
+
+ 
+
+#row {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    border: 1px solid $secondaryColor;
+    border-collapse: collapse;
+}
+
+.Chead, .shead {
+    color: $secondaryColor;
+    padding: 10px; 
+    text-align: left;
+    width: 50%;
+}
+
+.Cinfo, .Sinfo {
+    width: 50%;
     color: #aaa;
     padding: 10px;
     text-align: left;

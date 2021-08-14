@@ -136,6 +136,42 @@ ul, ol {
   }
 }
 
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.wrapper .search {
+  margin-left: 200px;
+  border: none;
+}
+
+.wrapper .search .search_input {
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.wrapper .search .search_button {
+  padding: 6px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background-color: #ae8d5e;
+  color: #fff;
+  font-weight: 600;
+}
+
 .aside {
   width: 20%;
   display: -webkit-box;
@@ -186,12 +222,51 @@ ul, ol {
   color: #fff;
   font-size: 22px;
   font-weight: 500;
-  margin-bottom: 10px;
 }
 
 .activities .activity_item .students_button, .activities .activity_item .select {
   display: block;
-  padding: 10px;
+  padding: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #ae8d5e;
+  color: #0F1826;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.cSource {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 0px;
+}
+
+.cSource .activity_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cSource .activity_item .activity-name {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.cSource .activity_item .students_button, .cSource .activity_item .select {
+  display: block;
+  padding: 6px;
   font-size: 16px;
   font-weight: 600;
   background-color: #ae8d5e;
@@ -279,7 +354,7 @@ ul, ol {
   margin-top: 20px;
 }
 
-.table {
+.table, #courseTable, #sourseTable {
   display: none;
   width: 100%;
   -webkit-box-orient: vertical;
@@ -318,6 +393,35 @@ thead {
 
 .info {
   width: 16%;
+  color: #aaa;
+  padding: 10px;
+  text-align: left;
+}
+
+#row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #ae8d5e;
+  border-collapse: collapse;
+}
+
+.Chead, .shead {
+  color: #ae8d5e;
+  padding: 10px;
+  text-align: left;
+  width: 50%;
+}
+
+.Cinfo, .Sinfo {
+  width: 50%;
   color: #aaa;
   padding: 10px;
   text-align: left;

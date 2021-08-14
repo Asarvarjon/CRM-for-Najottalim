@@ -34,4 +34,19 @@ server.post("/add_user", async (req, res) => {
 
     res.send(newStudent)
 })
+
+server.get("/courses", async (req, res) => { 
+    let users = await user.readFile()   
+    users  =  JSON.stringify({
+        data: users,
+    }) 
+    res.send(users)
+})
+
+
+
+
+ 
+
+
  

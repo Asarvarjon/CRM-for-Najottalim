@@ -54,3 +54,34 @@
     from, to { border-color: transparent }
     50% { border-color: orange; }
   }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+
+    .search {
+      margin-left: 200px;
+      border: none;
+
+      .search_input {
+        padding: 6px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+      }
+
+      .search_button {
+        padding: 6px;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        background-color: $secondaryColor;
+        color: #fff;
+        font-weight: 600;
+      }
+
+
+    }
+  }

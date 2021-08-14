@@ -21,19 +21,17 @@
     .activity_item {
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 80%; 
         margin-top: 30px;
-
         .activity-name {
             color: #fff;
             font-size: 22px;
-            font-weight: 500; 
-            margin-bottom: 10px;
+            font-weight: 500;  
         }
 
         .students_button, .select {
             display: block;
-            padding: 10px;
+            padding: 6px;
             font-size: 16px;
             font-weight: 600;
             background-color: $secondaryColor;
@@ -43,6 +41,7 @@
             border-radius: 5px;
             text-align: center;
         }
+        
 
         // .select {
         //     padding: 10px;
@@ -56,4 +55,34 @@
         // }
     }
 
+}
+
+.cSource {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+
+    .activity_item {
+        display: flex;
+        flex-direction: column;  
+        
+        .activity-name {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 500;  
+        }
+
+        .students_button, .select {
+            display: block;
+            padding: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: $secondaryColor;
+            color: $mainColor;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+    }
 }
