@@ -9,11 +9,11 @@ const studentsButton =document.querySelector("#students_button")
 const formSection = document.querySelector(".form-section")
 const tableSection = document.querySelector(".table")
 
-const courseButton = document.querySelector(".course_button")
-const sourceButton = document.querySelector(".source_button")
+const submitButton = document.querySelector(".submit")
 
-// const searchForm = document.querySelector(".search")
-// const searchInput = document.querySelector(".search_input")
+const courseButton = document.querySelector(".course_button")
+const sourceButton = document.querySelector(".source_button") 
+
 
 studentsButton.addEventListener("click", event => {
     formElement.style.display = "flex"
@@ -22,13 +22,12 @@ studentsButton.addEventListener("click", event => {
     formSection.style.display = "flex"
     tableSection.style.display = "flex"
     loadUsers()
-}) 
+})  
 
  async function loadUsers() {
      let response = await fetch("/users")
      response = await response.json()   
-     render(response.data.reverse()) 
-     
+     render(response.data.reverse())  
  }
 
  async function render(array) {
@@ -41,7 +40,7 @@ studentsButton.addEventListener("click", event => {
         const NumberTrElement = document.createElement("td")
         const CourseTrElement = document.createElement("td")
         const SourceTrElement = document.createElement("td")
-        const PaidTrElement = document.createElement("td")
+        const deleteTrElement = document.createElement("button")
 
         TrElement.classList.add("row")
         IdTrElement.classList.add("info")
@@ -49,40 +48,37 @@ studentsButton.addEventListener("click", event => {
         NumberTrElement.classList.add("info")
         CourseTrElement.classList.add("info")
         SourceTrElement.classList.add("info")
-        PaidTrElement.classList.add("info")  
+        deleteTrElement.classList.add("delete")  
+
+        deleteTrElement.addEventListener("click", async event => { 
+            let response = await fetch("/delete/" + element.id, {
+                method: "DELETE",
+            } ) 
+            loadUsers() 
+        })
 
         IdTrElement.textContent = element.id
         NameTrElement.textContent = element.name
         NumberTrElement.textContent = element.number
         CourseTrElement.textContent = element.course
         SourceTrElement.textContent = element.source 
-        PaidTrElement.textContent = element.paid
+        deleteTrElement.textContent = "O'chirish"
+
+       
 
         TrElement.appendChild(IdTrElement)
         TrElement.appendChild(NameTrElement)
         TrElement.appendChild(NumberTrElement) 
         TrElement.appendChild(CourseTrElement) 
         TrElement.appendChild(SourceTrElement) 
-        TrElement.appendChild(PaidTrElement)   
+        TrElement.appendChild(deleteTrElement)   
 
         TbodyElement.appendChild(TrElement)
      });
  }
 
 
-
-// const courseValue = document.querySelector(".course_value")
-// const sourceValue = document.querySelector(".source_value")
-
-// sourceSelect.addEventListener("change", event => {
-//     sourceValue.textContent = sourceSelect.value
-// })
-
-// courseSelect.addEventListener("change", event => {
-//     courseValue.textContent = courseSelect.value
-// })
-
-formElement.addEventListener("submit", async event => {
+submitButton.addEventListener("click", async event => {
     event.preventDefault() 
     studentBox.style.display = "none";
 
@@ -95,8 +91,7 @@ formElement.addEventListener("submit", async event => {
             name: nameInput.value,
             number: numberInput.value,
             course: courseSelect.value,
-            source: sourceSelect.value,
-            paid: "to'lanmagan"
+            source: sourceSelect.value 
         })
     })
 
@@ -135,7 +130,7 @@ async function renderCourse(array) {
 
      
       NumberTrElement.textContent = element.course
-      CourseTrElement.textContent = array.length - Math.ceil(Math.random() * 4)
+      CourseTrElement.textContent = array.length - 1
 
       TrElement.appendChild(NumberTrElement) 
       TrElement.appendChild(CourseTrElement)   
@@ -144,18 +139,4 @@ async function renderCourse(array) {
    });
 }
 
-
-// const sButton = document.querySelector(".source_button")
-// const sourceTable = document.querySelector("#sourseTable")
  
-// sButton.addEventListener("click", async event => {
-//     sourceTable.style.display = "flex"
-//     studentBox.style.display = "none";
-//     formElement.style.display = "none"
-//     tableSection.style.display = "none"
-//     CTable.style.display = "none"
-
-//     let sourseData =  await fetch("/courses")
-//     sourseData = await courseData.json() 
-     
-// })

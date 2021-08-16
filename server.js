@@ -30,7 +30,7 @@ server.get("/users", async (req, res) => {
 })
 
 server.post("/add_user", async (req, res) => {
-    let newStudent = await user.addUser(req.body.name, req.body.number, req.body.course, req.body.source, req.body.paid)
+    let newStudent = await user.addUser(req.body.name, req.body.number, req.body.course, req.body.source)
 
     res.send(newStudent)
 })
@@ -41,6 +41,13 @@ server.get("/courses", async (req, res) => {
         data: users,
     }) 
     res.send(users)
+})
+
+server.delete("/delete/:id", async (req, res) => {
+    await user.deleteStudent(req.params.id)
+    res.json({
+        ok: true
+    })
 })
 
 

@@ -21,8 +21,7 @@ module.exports = class Database {
             name: name,
             number: number,
             course: course,
-            source: source,
-            paid: paid
+            source: source
         }
 
         this.data.push(newData)
@@ -34,6 +33,17 @@ module.exports = class Database {
         return newData 
 
     } 
+
+    async deleteStudent(id){
+        let data = await this.readFile()
+        let filtered =  data.filter( (e) => e.id != id)
+        await fs.writeFile(
+            this.filePath,
+            JSON.stringify({
+                data: filtered
+            })
+        )
+    }
 
     // async find(name) {
     //     const newArray = []
